@@ -1,0 +1,16 @@
+.intro {
+  color: var(--black);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+
+  .intro_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vh;
+    grid-column: 2/4;
+    align-self: center;
+    width: 80%;
+  }
+}

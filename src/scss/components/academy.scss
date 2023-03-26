@@ -1,0 +1,40 @@
+.academy {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+
+  .academy_content {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+
+    h2 {
+      font-size: 32px;
+      text-shadow: 1px 1px 1px var(--black);
+      color: var(--white);
+    }
+
+    .academy_content_source {
+      display: flex;
+      width: 10%;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 40px;
+        filter: invert(70%) sepia(98%) saturate(361%) hue-rotate(31deg)
+          brightness(97%) contrast(74%);
+      }
+    }
+
+    .academy_acomplish {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 50vh;
+    }
+  }
+}

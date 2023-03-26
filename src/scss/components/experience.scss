@@ -1,0 +1,25 @@
+.experience {
+  height: 60vh;
+
+  .experience_content {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+
+    .experience_content_source {
+      display: flex;
+      width: 15%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 32px;
+      text-shadow: 1px 1px 1px var(--black);
+      color: var(--white);
+    }
+  }
+}
