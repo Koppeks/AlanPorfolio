@@ -1,8 +1,9 @@
 .experience {
   height: 60vh;
+  padding-left: 10vw;
 
   .experience_content {
-    width: 70%;
+    width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -18,8 +19,7 @@
 
     h2 {
       font-size: 32px;
-      text-shadow: 1px 1px 1px var(--black);
-      color: var(--white);
+      color: #ffffff;
     }
   }
 }
