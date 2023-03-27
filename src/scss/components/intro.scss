@@ -19,6 +19,24 @@
       font-size: 40px;
       font-weight: 700;
       color: #ffffff;
+      position: relative;
+      width: fit-content;
+    }
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background-color: #ffffff;
+      transition: 1s all;
+    }
+    .text_animation::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
     }
   }
 }

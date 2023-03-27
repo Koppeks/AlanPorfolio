@@ -1,10 +1,38 @@
+import { useEffect, useRef, useState } from "react";
 import imgexperience from "../assets/sintiendome.png";
 
 export default function Experience() {
+  const targetRef = useRef();
+
+  const [isView, setIsView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsView(true);
+        } else {
+          setIsView(false);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, [targetRef]);
+
   return (
     <div className="experience">
       <section className="experience_content">
-        <h2>Experiencia laboral</h2>
+        <h2 ref={targetRef} className={`${isView ? "text_animation" : ""}`}>
+          Experiencia laboral
+        </h2>
         <h3>CONTENIDO DE MARCA - Enero 2022/Actualidad</h3>
         <div className="experience_content_source">
           <img src={imgexperience} alt="" srcset="" />

@@ -1,10 +1,38 @@
+import { useEffect, useRef, useState } from "react";
 import imgacademy from "../assets/platzi.svg";
 
 export default function Academy() {
+  const targetRef = useRef();
+
+  const [isView, setIsView] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsView(true);
+        } else {
+          setIsView(false);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, [targetRef]);
+
   return (
     <div className="academy">
       <section className="academy_content">
-        <h2>Historial academico</h2>
+        <h2 ref={targetRef} className={`${isView ? "text_animation" : ""}`}>
+          Historial academico
+        </h2>
         <div className="academy_content_source">
           <img src={imgacademy} alt="Platzi logo" />
           <h4>Platzi</h4>
