@@ -35,7 +35,7 @@ export default function Experience() {
         </h2>
         <h3>CONTENIDO DE MARCA - Enero 2022/Actualidad</h3>
         <div className="experience_content_source">
-          <img src={imgexperience} alt="" srcset="" />
+          <img src={imgexperience} alt="" />
           <h4>Sintiendo.me</h4>
         </div>
         <p>

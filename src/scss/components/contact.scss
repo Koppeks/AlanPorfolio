@@ -10,7 +10,7 @@
   .contact_form {
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 80%;
     justify-content: space-evenly;
     width: 40%;
 
@@ -40,6 +40,14 @@
         padding-left: 10px;
         color: var(--black);
         font-weight: 600;
+      }
+
+      .error_form {
+        font-weight: 600;
+        color: red;
+        position: absolute;
+        bottom: -22px;
+        padding-left: 15px;
       }
 
       input:focus,
@@ -72,7 +80,7 @@
 
       textarea:focus,
       textarea:valid {
-        background-color: var(--yellow);
+        background-color: var(--yellow) !important;
       }
 
       textarea:focus + label {
@@ -83,8 +91,29 @@
         top: -20px;
       }
     }
-  }
 
+    .button {
+      height: 30px;
+      border-radius: 15px;
+      border: 1px solid var(--black);
+      font-weight: 500px;
+      cursor: pointer;
+      transition: 0.4s all;
+    }
+    .button:hover {
+      border: none;
+      border: 1px solid var(--yellow);
+      background-color: var(--yellow);
+    }
+
+    .disabled {
+      background-color: gray;
+    }
+    .disabled:hover {
+      background-color: gray;
+      border: 1px solid gray;
+    }
+  }
   .contact_animation_reveal {
     position: absolute;
     left: 0;

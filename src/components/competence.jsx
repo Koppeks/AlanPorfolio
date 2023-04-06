@@ -9,10 +9,9 @@ export default function Competence() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log("Visible");
           setBubbleAnim(true);
         } else {
-          console.log("No visible");
+          setBubbleAnim(false);
         }
       },
       { threshold: 0.5 }
@@ -45,7 +44,9 @@ export default function Competence() {
         className={`competence_animation_reveal ${
           bubbleAnim ? "animation_reveal" : ""
         }`}
-      ></div>
+      >
+        <section className="competence_animation_reveal_detail"></section>
+      </div>
     </div>
   );
 }

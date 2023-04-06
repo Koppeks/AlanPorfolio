@@ -7,5 +7,11 @@
   /*colors*/
   --yellow: #ffd159;
   --black: #081a1f;
-  --white: #f2f2f2;
+  --white: #ffffff;
+
+  /*Toast library overighting*/
+  --toastify-color-success: #ffd159;
+  --toastify-text-color-success: #fff;
+
+  --toastify-font-family: var(--font-garamond);
 }

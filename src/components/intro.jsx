@@ -9,10 +9,8 @@ export default function Intro() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log("in view");
           setInView(true);
         } else {
-          console.log("not in view");
           setInView(false);
         }
       },

@@ -31,10 +31,17 @@ export default function Header() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="480" cy="480" r="480" fill="white" />
+          <circle
+            cx="480"
+            cy="480"
+            r="475"
+            fill="white"
+            stroke="#FFD159"
+            strokeWidth="10"
+          />
         </svg>
         <div className="header_img">
-          <img src={profilepic} alt="" srcset="" />
+          <img src={profilepic} alt="" />
         </div>
       </div>
       <div className={`header_name ${isScrolled ? "tiny_header_name" : ""}`}>
