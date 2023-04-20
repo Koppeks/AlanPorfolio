@@ -12,7 +12,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 40vh;
-    grid-column: 2/4;
     align-self: center;
     width: 60%;
 
@@ -38,6 +37,47 @@
       position: absolute;
       left: 0;
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .intro {
+    padding: 1em;
+
+    .intro_content {
+      height: 60vh;
+      width: 90%;
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: calc($small + 1px)) and (max-width: $medium) {
+  .intro {
+    padding: 1em;
+
+    .intro_content {
+      height: 30vh;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: calc($medium + 1px)) and (max-width: $large) {
+  .intro {
+    padding: 1em;
+
+    .intro_content {
+      height: 30vh;
+      width: 80%;
+
+      p {
+        font-size: 19px;
+      }
     }
   }
 }

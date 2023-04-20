@@ -57,3 +57,48 @@
     }
   }
 }
+
+@media screen and (max-width: $small) {
+  .academy {
+    padding: 10vw;
+
+    .academy_content {
+      width: 100%;
+      height: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: calc($small + 1px)) and (max-width: $medium) {
+  .academy {
+    padding: 10vw;
+    height: 70vh;
+
+    .academy_content {
+      width: 90%;
+      height: 60%;
+
+      .academy_content_source {
+        width: 20%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: calc($medium + 1px)) and (max-width: $large) {
+  .academy {
+    padding: 10vw;
+    height: 70vh;
+
+    .academy_content {
+      width: 90%;
+      height: 60%;
+
+      .academy_content_source {
+        width: 20%;
+        margin-top: 20px;
+      }
+    }
+  }
+}

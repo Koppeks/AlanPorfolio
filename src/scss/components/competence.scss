@@ -28,8 +28,7 @@
     height: 100vh;
     background-image: -webkit-radial-gradient(
       100% 50%,
-      /* The 223px is what determines which side it is on, so if you wanted it to be on the left side, you would change it to -13px. Alter this to your needs*/
-        circle closest-corner,
+      circle closest-corner,
       rgba(0, 0, 0, 0) 0,
       rgba(0, 0, 0, 0) 100%,
       black 0,
@@ -56,3 +55,81 @@
     border-radius: 50%;
   }
 }
+
+@media screen and (max-width: $small) {
+  .competence {
+    width: 100%;
+
+    h2 {
+      font-size: 28px;
+      padding: 1em;
+    }
+
+    ul {
+      padding: 1em;
+    }
+
+    .animation_reveal {
+      width: 0%;
+    }
+
+    .competence_animation_reveal_detail {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: calc($small + 1px)) and (max-width: $medium) {
+  .competence {
+    .competence_animation_reveal {
+      background-image: -webkit-radial-gradient(
+        100% 50%,
+        circle closest-corner,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0) 100%,
+        black 0,
+        var(--yellow) 0
+      );
+    }
+
+    .animation_reveal {
+      left: -20%;
+    }
+
+    .competence_animation_reveal_detail {
+      height: 20vh;
+      width: 20vh;
+      left: -50%;
+    }
+  }
+}
+
+@media screen and (min-width: calc($medium + 1px)) and (max-width: $large) {
+  .competence {
+    height: 80vh;
+
+    .competence_animation_reveal {
+      height: 80.5vh;
+    }
+
+    .competence_animation_reveal_detail {
+      height: 20vh;
+      width: 20vh;
+    }
+  }
+}
+
+// @media screen and (max-width: $large) {
+//   .competence {
+//     height: 80vh;
+
+//     .competence_animation_reveal {
+//       height: 80vh;
+//     }
+
+//     .competence_animation_reveal_detail {
+//       height: 40vh;
+//       width: 40vh;
+//     }
+//   }
+// }
